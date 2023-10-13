@@ -8,8 +8,7 @@ export default class Board {
     for (let i = 0; i < 8; i++) {
       const nestedArr = [];
       for (let j = 0; j < 8; j++) {
-        if (j === 3 && i === 4) nestedArr.push('x');
-        else nestedArr.push(j+1);
+        nestedArr.push(j+1);
       }
       arr.push(nestedArr);
     }
@@ -26,7 +25,7 @@ export default class Board {
         str += this.squares[j][i];
       }
       console.log(str);
-    }
+    }console.log('-----------------------');
     console.log('A  B  C  D  E  F  G  H');
   }
 }
