@@ -1,7 +1,7 @@
 /**
- * @module Node
+ * @module Vertex
  */
-export default class Node {
+export default class Vertex {
   /**
    * @param {array} coord
    */

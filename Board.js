@@ -1,3 +1,4 @@
+import Vertex from './Vertex.js';
 /**
  * @module Board
  */
@@ -25,7 +26,8 @@ export default class Board {
         str += this.squares[j][i];
       }
       console.log(str);
-    }console.log('-----------------------');
+    }
+    console.log('-----------------------');
     console.log('A  B  C  D  E  F  G  H');
   }
 }
