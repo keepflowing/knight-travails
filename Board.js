@@ -7,27 +7,32 @@ export default class Board {
   init() {
     const arr = [];
     for (let i = 0; i < 8; i++) {
-      const nestedArr = [];
       for (let j = 0; j < 8; j++) {
-        nestedArr.push(j+1);
+        arr.push([i, j]);
       }
-      arr.push(nestedArr);
     }
     this.squares = arr;
   }
 
+  /**
+   * @param {int[]} [first=[0, 0]]
+   * @param {int[]} [last=[7, 7]]
+   * @return {Vertex}
+   */
+  createGraph(first = [0, 0], last = [7, 7]) {
+    return new Vertex(first);
+  }
+
   /** Draw board in terminal*/
   draw() {
+    let str = '';
     for (let i = 7; i >= 0; i--) {
-      let str = ''; // i+1;
       for (let j = 0; j < 8; j++) {
-        if (!j) str += '';
-        else str += '  ';
-        str += this.squares[j][i];
+        str += `[${this.squares[(j*8)+i]}]`;
       }
       console.log(str);
+      console.log(' ');
+      str = '';
     }
-    console.log('-----------------------');
-    console.log('A  B  C  D  E  F  G  H');
   }
 }
