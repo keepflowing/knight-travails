@@ -5,5 +5,6 @@ const board = new Board;
 const knight = new Knight;
 
 board.init();
-board.squares[0][0] = knight.marker;
 board.draw();
+
+console.log(board.createGraph(knight.square));
