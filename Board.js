@@ -1,4 +1,3 @@
-import Vertex from './Vertex.js';
 /**
  * @module Board
  */
@@ -12,15 +11,6 @@ export default class Board {
       }
     }
     this.squares = arr;
-  }
-
-  /**
-   * @param {int[]} [first=[0, 0]]
-   * @param {int[]} [last=[7, 7]]
-   * @return {Vertex}
-   */
-  createGraph(first = [0, 0], last = [7, 7]) {
-    return new Vertex(first);
   }
 
   /** Draw board in terminal*/
